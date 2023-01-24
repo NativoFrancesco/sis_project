@@ -1,0 +1,35 @@
+.model SOTTRAZIONE
+.inputs a1 a2 a3 a4 a5
+.outputs r1 r2 r3 r4 r5
+
+#primo bit
+.names a1 a2 a3 a4 a5 r5
+---10 1
+--100 1
+-1000 1
+10000 1
+
+#secondo bit
+.names a1 a2 a3 a4 a5 r5 r4
+--1001 1
+-10001 1
+100001 1
+---110 1
+
+#terzo bit
+.names a1 a2 a3 a4 r4 r3
+-1001 1
+10001 1
+--110 1
+--111 1
+
+#quarto bit
+.names a1 a2 a3 r3 r2
+1001 1
+-110 1
+-111 1
+
+#quinto bit
+.names a1 a2 r2 r1
+110 1
+111 1

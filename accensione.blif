@@ -1,0 +1,16 @@
+.model ACCENSIONE
+.inputs b4 b3 b2 b1 b0
+.output switch
+
+.start_kiss
+.i 2
+.o 1
+.p 2
+.s 2
+.r OFF
+
+11111 OFF ON 1
+00000 ON OFF 0
+.end_kiss
+
+.end

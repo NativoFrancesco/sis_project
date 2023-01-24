@@ -1,0 +1,51 @@
+.model FSMD.blif
+.inputs i o a b c
+.outputs nosect gate full
+
+# Start device
+.subckt ACCENSIONE b4=i b3=o b2=a b1=b b0=c on=switch
+
+# Sect exists
+.names on a b c nosect
+1000 1
+1011 1
+1101 1
+1110 1
+1111 1
+
+#--------------------------------------
+# Full Sector
+# Is a full
+.names on nosect i o a af
+10101 1
+
+# Is b full
+.names on nosect i o b bf
+10101 1
+
+# Is c full
+.names on nosect i o c cf
+10101 1
+
+# Var full set
+.names nosect a b c af bf cf full
+01--1-- 1
+0-1--1- 1
+0--1--1 1
+#--------------------------------------
+
+# Open the gate
+.names on nosect i o a b c af bf cf gate
+1001------ 1
+10101--0-- 1
+1010-1--0- 1
+1010--1--0 1
+
+#.names i o gate
+#-- 0
+
+.end
+
+.search accensione.blif
+.search sottrattore.blif
+.search sommatore.blif

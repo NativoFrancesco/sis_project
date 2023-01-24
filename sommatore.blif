@@ -1,0 +1,29 @@
+.model SOMMA
+.inputs a1 a2 a3 a4 a5
+.outputs r1 r2 r3 r4 r5
+
+#primo bit
+.names a1 a2 a3 a4 a5 r5
+----0 1
+
+#secondo bit
+.names a1 a2 a3 a4 a5 r5 r4
+---010 1
+---101 1
+
+#terzo bit
+.names a1 a2 a3 a4 a5 r4 r3
+--01-0 1
+--10-1 1
+
+#quarto bit
+.names a1 a2 a3 a4 a5 r3 r2
+-01--0 1
+-10--1 1
+
+#quinto bit
+.names a1 a2 a3 a4 a5 r2 r1
+01---0 1
+10---1 1
+
+.end
