@@ -1,14 +1,13 @@
 .model ACCENSIONE
 .inputs I4 I3 I2 I1 I0
 .outputs switch
-
+.latch    [74] LatchOut_v5   1
 .start_kiss
 .i 5
 .o 1
-.p 4
+.p 12
 .s 2
 .r OFF
-
 11111 OFF ON 1
 0---- OFF OFF 0
 -0--- OFF OFF 0
@@ -21,8 +20,22 @@
 --1-- ON ON 1
 ---1- ON ON 1
 ----1 ON ON 1
-
 .end_kiss
-.code ON 1
-.code OFF 0
+.latch_order LatchOut_v5
+.code OFF 1
+.code ON 0
+.names I4 I3 I2 I1 I0 LatchOut_v5 [74]
+0----1 1
+-0---1 1
+--0--1 1
+---0-1 1
+----01 1
+00000- 1
+.names I4 I3 I2 I1 I0 LatchOut_v5 switch
+1----0 1
+-1---0 1
+--1--0 1
+---1-0 1
+----10 1
+11111- 1
 .end

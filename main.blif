@@ -1,0 +1,6 @@
+.model MAIN
+.inputs I4 I3 I2 I1 I0
+.outputs O
+.subckt ACCENSIONE I4=I4 I3=I3 I2=I2 I1=I1 I0=I0 switch=O
+.end
+.search acc_jedi.blif
