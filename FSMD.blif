@@ -1,9 +1,9 @@
-.model FSMD.blif
+.model FSMD
 .inputs i o a b c
 .outputs nosect gate full
 
 # Start device
-.subckt ACCENSIONE b4=i b3=o b2=a b1=b b0=c on=switch
+.subckt ACCENSIONE I4=i I3=o I2=a I1=b I0=c switch=on
 
 # Sect exists
 .names on a b c nosect
@@ -46,6 +46,6 @@
 
 .end
 
-.search accensione.blif
-.search sottrattore.blif
+.search acc_jedi.blif
 .search sommatore.blif
+.search sottrattore.blif
