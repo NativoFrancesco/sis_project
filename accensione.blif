@@ -5,16 +5,21 @@
 .start_kiss
 .i 5
 .o 1
-.p 4
-.s 2
+.p 15
+.s 5
 .r OFF
 
-11111 OFF ON 1
+11111 OFF A 1
 0---- OFF OFF 0
 -0--- OFF OFF 0
 --0-- OFF OFF 0
 ---0- OFF OFF 0
 ----0 OFF OFF 0
+
+----- A B 0
+----- B C 0
+----- C ON 0
+
 00000 ON OFF 0
 1---- ON ON 1
 -1--- ON ON 1
@@ -23,6 +28,9 @@
 ----1 ON ON 1
 
 .end_kiss
-.code ON 1
-.code OFF 0
+#.code ON 111
+#.code A 100
+#.code B 010
+#.code C 001
+#.code OFF 000
 .end
