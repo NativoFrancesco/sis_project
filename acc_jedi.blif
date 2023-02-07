@@ -1,71 +1,27 @@
 .model ACCENSIONE
-.inputs I4 I3 I2 I1 I0
-.outputs switch
-.latch    [195] LatchOut_v5   0
-.latch    [196] LatchOut_v6   0
-.latch    [197] LatchOut_v7   1
+.inputs
+.outputs
 .start_kiss
 .i 5
-.o 1
+.o 3
 .p 15
 .s 5
 .r OFF
-11111 OFF A 1
-0---- OFF OFF 0
--0--- OFF OFF 0
---0-- OFF OFF 0
----0- OFF OFF 0
-----0 OFF OFF 0
------ A B 0
------ B C 0
------ C ON 0
-00000 ON OFF 0
-1---- ON ON 1
--1--- ON ON 1
---1-- ON ON 1
----1- ON ON 1
-----1 ON ON 1
+11111 OFF A 001
+0---- OFF OFF 000
+-0--- OFF OFF 000
+--0-- OFF OFF 000
+---0- OFF OFF 000
+----0 OFF OFF 000
+----- A B 010
+----- B C 100
+----- C ON 111
+00000 ON OFF 000
+1---- ON ON 111
+-1--- ON ON 111
+--1-- ON ON 111
+---1- ON ON 111
+----1 ON ON 111
 .end_kiss
-.latch_order LatchOut_v5 LatchOut_v6 LatchOut_v7
-.code OFF 001
-.code A 101
-.code B 010
-.code C 110
-.code ON 011
-.names I4 I3 I2 I1 I0 LatchOut_v5 LatchOut_v6 LatchOut_v7 [195]
------0-0 1
-1111100- 1
-.names I4 I3 I2 I1 I0 LatchOut_v5 LatchOut_v6 LatchOut_v7 [196]
------1-- 1
------0-0 1
-1-----11 1
--1----11 1
---1---11 1
----1--11 1
-----1-11 1
-.names LatchOut_v5 LatchOut_v7 [197]
-01 1
-10 1
-.names I4 I3 I2 I1 I0 LatchOut_v5 LatchOut_v6 LatchOut_v7 switch
-1-----11 1
--1----11 1
---1---11 1
----1--11 1
-----1-11 1
-1111100- 1
-.exdc 
-.inputs I4 I3 I2 I1 I0 LatchOut_v5 LatchOut_v6 LatchOut_v7
-.outputs [195] [196] [197] switch
-.names LatchOut_v5 LatchOut_v6 LatchOut_v7 [195]
--00 1
-111 1
-.names LatchOut_v5 LatchOut_v6 LatchOut_v7 [196]
--00 1
-111 1
-.names LatchOut_v5 LatchOut_v6 LatchOut_v7 [197]
--00 1
-111 1
-.names LatchOut_v5 LatchOut_v6 LatchOut_v7 switch
--00 1
-111 1
+.latch_order
 .end
