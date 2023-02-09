@@ -1,9 +1,9 @@
 .model ACCENSIONE
-.inputs v0 v1 v2 v3 v4
-.outputs v8.3 v8.4 v8.5
-.latch    [1] LatchOut_v5   0
-.latch    [2] LatchOut_v6   0
-.latch    [3] LatchOut_v7   0
+.inputs I4 I3 I2 I1 I0
+.outputs o1 o2 o3
+.latch    [41] LatchOut_v5   0
+.latch    [42] LatchOut_v6   0
+.latch    [43] LatchOut_v7   0
 .start_kiss
 .i 5
 .o 3
@@ -32,7 +32,7 @@
 .code B 010
 .code C 001
 .code ON 111
-.names v0 v1 v2 v3 v4 LatchOut_v5 LatchOut_v6 LatchOut_v7 [1]
+.names I4 I3 I2 I1 I0 LatchOut_v5 LatchOut_v6 LatchOut_v7 [41]
 1------1 1
 -1-----1 1
 --1----1 1
@@ -40,7 +40,7 @@
 ----1--1 1
 ------01 1
 1111100- 1
-.names v0 v1 v2 v3 v4 LatchOut_v5 LatchOut_v6 LatchOut_v7 [2]
+.names I4 I3 I2 I1 I0 LatchOut_v5 LatchOut_v6 LatchOut_v7 [42]
 1------1 1
 -1-----1 1
 --1----1 1
@@ -48,7 +48,7 @@
 ----1--1 1
 ------01 1
 -----1-0 1
-.names v0 v1 v2 v3 v4 LatchOut_v6 LatchOut_v7 [3]
+.names I4 I3 I2 I1 I0 LatchOut_v6 LatchOut_v7 [43]
 1-----1 1
 -1----1 1
 --1---1 1
@@ -56,7 +56,7 @@
 ----1-1 1
 -----01 1
 -----10 1
-.names v0 v1 v2 v3 v4 LatchOut_v6 LatchOut_v7 v8.3
+.names I4 I3 I2 I1 I0 LatchOut_v6 LatchOut_v7 o1
 1-----1 1
 -1----1 1
 --1---1 1
@@ -64,7 +64,7 @@
 ----1-1 1
 -----01 1
 -----10 1
-.names v0 v1 v2 v3 v4 LatchOut_v5 LatchOut_v6 LatchOut_v7 v8.4
+.names I4 I3 I2 I1 I0 LatchOut_v5 LatchOut_v6 LatchOut_v7 o2
 1------1 1
 -1-----1 1
 --1----1 1
@@ -72,7 +72,7 @@
 ----1--1 1
 ------01 1
 -----1-0 1
-.names v0 v1 v2 v3 v4 LatchOut_v5 LatchOut_v6 LatchOut_v7 v8.5
+.names I4 I3 I2 I1 I0 LatchOut_v5 LatchOut_v6 LatchOut_v7 o3
 1------1 1
 -1-----1 1
 --1----1 1
@@ -81,29 +81,29 @@
 ------01 1
 1111100- 1
 .exdc 
-.inputs v0 v1 v2 v3 v4 LatchOut_v5 LatchOut_v6 LatchOut_v7
-.outputs [1] [2] [3] v8.3 v8.4 v8.5
-.names LatchOut_v5 LatchOut_v6 LatchOut_v7 [1]
+.inputs I4 I3 I2 I1 I0 LatchOut_v5 LatchOut_v6 LatchOut_v7
+.outputs [41] [42] [43] o1 o2 o3
+.names LatchOut_v5 LatchOut_v6 LatchOut_v7 [41]
 011 1
 101 1
 110 1
-.names LatchOut_v5 LatchOut_v6 LatchOut_v7 [2]
+.names LatchOut_v5 LatchOut_v6 LatchOut_v7 [42]
 011 1
 101 1
 110 1
-.names LatchOut_v5 LatchOut_v6 LatchOut_v7 [3]
+.names LatchOut_v5 LatchOut_v6 LatchOut_v7 [43]
 011 1
 101 1
 110 1
-.names LatchOut_v5 LatchOut_v6 LatchOut_v7 v8.3
+.names LatchOut_v5 LatchOut_v6 LatchOut_v7 o1
 011 1
 101 1
 110 1
-.names LatchOut_v5 LatchOut_v6 LatchOut_v7 v8.4
+.names LatchOut_v5 LatchOut_v6 LatchOut_v7 o2
 011 1
 101 1
 110 1
-.names LatchOut_v5 LatchOut_v6 LatchOut_v7 v8.5
+.names LatchOut_v5 LatchOut_v6 LatchOut_v7 o3
 011 1
 101 1
 110 1

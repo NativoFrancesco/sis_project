@@ -3,46 +3,43 @@
 .outputs nosect gate full
 
 # Start device
-.subckt ACCENSIONE I4=i I3=o I2=a I1=b I0=c switch=on
+.subckt ACCENSIONE I4=i I3=o I2=a I1=b I0=c o1=o1 o2=o2 o3=o3
 
 # Sect exists
-.names on a b c nosect
-1000 1
-1011 1
-1101 1
-1110 1
-1111 1
+.names o1 o2 o3 a b c nosect
+111000 1
+111011 1
+111101 1
+111110 1
+111111 1
 
 #--------------------------------------
 # Full Sector
 # Is a full
-.names on nosect i o a af
-10101 1
+.names o1 o2 o3 nosect i o a af
+1110101 1
 
 # Is b full
-.names on nosect i o b bf
-10101 1
+.names o1 o2 o3 nosect i o b bf
+1110101 1
 
 # Is c full
-.names on nosect i o c cf
-10101 1
+.names o1 o2 o3 nosect i o c cf
+1110101 1
 
 # Var full set
-.names nosect a b c af bf cf full
-01--1-- 1
-0-1--1- 1
-0--1--1 1
+.names o1 o2 o3 nosect a b c af bf cf full
+11101--1-- 1
+1110-1--1- 1
+1110--1--1 1
 #--------------------------------------
 
 # Open the gate
-.names on nosect i o a b c af bf cf gate
-1001------ 1
-10101--0-- 1
-1010-1--0- 1
-1010--1--0 1
-
-#.names i o gate
-#-- 0
+.names o1 o2 o3 nosect i o a b c af bf cf gate
+111001------ 1
+1110101--0-- 1
+111010-1--0- 1
+111010--1--0 1
 
 .end
 

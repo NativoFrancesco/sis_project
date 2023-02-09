@@ -1,6 +1,6 @@
 .model ACCENSIONE
 .inputs I4 I3 I2 I1 I0
-.outputs switch
+.outputs o1 o2 o3
 
 .start_kiss
 .i 5
