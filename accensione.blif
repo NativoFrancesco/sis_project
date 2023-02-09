@@ -28,9 +28,9 @@
 ----1 ON ON 111
 
 .end_kiss
-#.code ON 111
-#.code A 100
-#.code B 010
-#.code C 001
-#.code OFF 000
+.code ON 111
+.code A 100
+.code B 010
+.code C 001
+.code OFF 000
 .end
