@@ -1,0 +1,9 @@
+.model REGISTROA
+.latch
+.end
+
+.model REGISTROB
+.end
+
+.model REGISTROC
+.end
